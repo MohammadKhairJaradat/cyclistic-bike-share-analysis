@@ -91,3 +91,7 @@ Counts reconcile from source to cleaned trips. SQL results agree with pandas. Du
 Validated with Python 3.14.6, pandas 3.0.5, NumPy 2.5.2, and Matplotlib 3.11.1. Dependency ranges are in `requirements.txt`.
 
 Data: [Divvy system data](https://divvybikes.com/system-data), under the [Divvy Data License Agreement](https://divvybikes.com/data-license-agreement). This is an independent educational analysis. Raw ZIPs, cleaned trip-level files, local caches, and the supplied course packet are excluded from Git. The processed tables and native Power BI files are included.
+
+## Contact
+
+[Email Mohammad Khair Jaradat](mailto:mohammad.sameer.jaradat@gmail.com) · [GitHub profile](https://github.com/MohammadKhairJaradat) · [CV](https://github.com/MohammadKhairJaradat/MohammadKhairJaradat/blob/main/Mohammad_Khair_Jaradat_CV.pdf)
