@@ -1,5 +1,7 @@
 # Cyclistic Bike-Share Analysis
 
+**Case study and Power BI report** · [Portfolio](https://github.com/MohammadKhairJaradat) · [CV](https://github.com/MohammadKhairJaradat/blob/main/Mohammad_Khair_Jaradat_CV.pdf)
+
 **Python · SQL · Power BI**
 
 A Google Data Analytics capstone project comparing casual riders and members. Cyclistic is a fictional company; this analysis uses real public Divvy trip data from Chicago.
