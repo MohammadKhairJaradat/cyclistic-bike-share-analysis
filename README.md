@@ -28,7 +28,7 @@ The project follows **Ask → Prepare → Process → Analyze → Share → Act*
 
 - Casual trips were **1.49 times longer** on average.
 - **46.4%** of casual trips occurred in June–August 2026.
-- Casual trips had a higher weekend share; both rider groups peaked around **17:00**.
+- Casual trips had a **37.2% weekend share**, compared with **23.3%** for members: a **13.9 percentage-point gap**. Both rider groups peaked around **17:00**.
 - **Navy Pier** led recorded casual start stations. About **20.5%** of casual trips had no start-station name.
 
 ### Three recommendations
