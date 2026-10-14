@@ -1,6 +1,6 @@
 # Cyclistic Bike-Share Analysis
 
-**Case study and Power BI report** · [Portfolio](https://github.com/MohammadKhairJaradat) · [CV](https://github.com/MohammadKhairJaradat/blob/main/Mohammad_Khair_Jaradat_CV.pdf)
+**Case study and Power BI report** · [Portfolio](https://github.com/MohammadKhairJaradat) · [CV](https://github.com/MohammadKhairJaradat/MohammadKhairJaradat/blob/main/Mohammad_Khair_Jaradat_CV.pdf)
 
 **Python · SQL · Power BI**
 
