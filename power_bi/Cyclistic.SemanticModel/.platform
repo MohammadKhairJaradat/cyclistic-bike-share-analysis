@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Cyclistic"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c3559663-a5e3-4064-bd14-adf1aa17607c"
+  }
+}

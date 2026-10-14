@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Cyclistic"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f651959c-a5b3-4a6f-a081-3af811d222e4"
+  }
+}

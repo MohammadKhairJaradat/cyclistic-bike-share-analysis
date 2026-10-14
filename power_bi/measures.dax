@@ -1,0 +1,43 @@
+Total Rides =
+SUM(Trips[Ride count])
+
+Average Ride Minutes =
+DIVIDE(SUM(Trips[Duration minutes]), [Total Rides])
+
+Casual Rides =
+CALCULATE([Total Rides], Rider[Rider] = "Casual")
+
+Member Rides =
+CALCULATE([Total Rides], Rider[Rider] = "Member")
+
+Casual Ride Share =
+DIVIDE([Casual Rides], CALCULATE([Total Rides], REMOVEFILTERS(Rider)))
+
+Weekend Ride Share =
+DIVIDE(COALESCE(CALCULATE([Total Rides], KEEPFILTERS(Trips[Day type] = "Weekend")), 0), [Total Rides])
+
+Hourly Ride Share =
+DIVIDE([Total Rides], CALCULATE([Total Rides], REMOVEFILTERS(Trips[Hour])))
+
+Station Rides =
+SUM(Stations[Ride count])
+
+Casual Station Rides =
+CALCULATE([Station Rides], Rider[Rider] = "Casual")
+
+Known Casual Station Share =
+DIVIDE(CALCULATE([Casual Station Rides], Stations[Start station] <> "Unknown station"), [Casual Station Rides])
+
+Top 10 Casual Station Rides =
+VAR KnownStations = FILTER(ALLSELECTED(Stations[Start station]), Stations[Start station] <> "Unknown station")
+VAR TopStations = TOPN(10, KnownStations, [Casual Station Rides], DESC, Stations[Start station], ASC)
+RETURN IF(CONTAINS(TopStations, Stations[Start station], SELECTEDVALUE(Stations[Start station])), [Casual Station Rides])
+
+Source Rides =
+SUM(Quality[Source rides])
+
+Removed Rides =
+SUM(Quality[Source rides]) - SUM(Quality[Clean rides])
+
+Retained Ride Share =
+DIVIDE(SUM(Quality[Clean rides]), [Source Rides])

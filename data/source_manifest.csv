@@ -1,0 +1,13 @@
+month,file,source_url,downloaded_on,download_method,size_bytes,sha256,source_rows
+202510,202510-divvy-tripdata.zip,https://divvy-tripdata.s3.amazonaws.com/202510-divvy-tripdata.zip,2026-10-13,Browser,24605753,1b01969507fb7e136f56c8bf8b586564ed93f0a80ae6ae5f5dcfda3396ff4177,646039
+202511,202511-divvy-tripdata.zip,https://divvy-tripdata.s3.amazonaws.com/202511-divvy-tripdata.zip,2026-10-13,Browser,13591801,7d873352d710a2c4a4190cbf83c6a9ceb1c21319b02de339578ef71f11587704,356628
+202512,202512-divvy-tripdata.zip,https://divvy-tripdata.s3.amazonaws.com/202512-divvy-tripdata.zip,2026-10-13,Browser,5701852,bd171dbffa690aec3024b3605b86ec5120706eebc9d9bff69358130c58faed9a,140534
+202601,202601-divvy-tripdata.zip,https://divvy-tripdata.s3.amazonaws.com/202601-divvy-tripdata.zip,2026-10-13,Browser,5907269,c72e49ced87ed20d4da4730c8905f007f78c771a68fbb5c2caf194fcaf5536ca,137787
+202602,202602-divvy-tripdata.zip,https://divvy-tripdata.s3.amazonaws.com/202602-divvy-tripdata.zip,2026-10-13,Browser,8201530,daaccc57e08033a35ead6d0d3c0092d2857ef788bbd7c137d457b56d35b12061,201450
+202603,202603-divvy-tripdata.zip,https://divvy-tripdata.s3.amazonaws.com/202603-divvy-tripdata.zip,2026-10-13,Browser,13165409,7553befd3f668bc37d40119984931f78fb870fe62cd1eb69479bb106b1d1038d,317037
+202604,202604-divvy-tripdata.zip,https://divvy-tripdata.s3.amazonaws.com/202604-divvy-tripdata.zip,2026-10-13,Browser,17068744,af16f7c43ddcce1383dee15e83c7daa01ecab2346bf856b5333f8e61b6ce7f04,448252
+202605,202605-divvy-tripdata.zip,https://divvy-tripdata.s3.amazonaws.com/202605-divvy-tripdata.zip,2026-10-13,Browser,24934348,880e4ff17b03e206ef8f06e5815fc6b520172bd6f0298682823007be99ce34b2,653704
+202606,202606-divvy-tripdata.zip,https://divvy-tripdata.s3.amazonaws.com/202606-divvy-tripdata.zip,2026-10-13,Browser,28468364,34bde1eddacef591664fa97495460fe33265078f4134f8b80f141f94d126cc01,762550
+202607,202607-divvy-tripdata.zip,https://divvy-tripdata.s3.amazonaws.com/202607-divvy-tripdata.zip,2026-10-13,Browser,32910286,4e6bc8725a92f5e4cebb9b3592874b1cea85111f920f9db9cd607cf88ec1fd14,869051
+202608,202608-divvy-tripdata.zip,https://divvy-tripdata.s3.amazonaws.com/202608-divvy-tripdata.zip,2026-10-13,Browser,32611393,3f4de338ee56b1bee76ea310a42f790a2e88e062c3635638cd382582615b827f,868191
+202609,202609-divvy-tripdata.zip,https://divvy-tripdata.s3.amazonaws.com/202609-divvy-tripdata.zip,2026-10-13,Browser,29538516,c4d77fa960becee43885addacd48f82c1ab803f925a079750bb46ffe52c798af,770562

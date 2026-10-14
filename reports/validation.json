@@ -1,0 +1,715 @@
+{
+  "passed_checks": 156,
+  "source_rows": 6171785,
+  "clean_rows": 6007154,
+  "data_validation": "passed",
+  "report_schema_validation": "passed for available official schemas; compatibility structure checked for native 2.13.0 visuals",
+  "visual_layout_validation": "passed: all three pages reviewed in Power BI Desktop",
+  "schema_note": "Power BI Desktop saved six visuals with version 2.13.0, whose official schema URL returns 404. All 40 visuals were structurally checked against 1.0.0 with only the schema identifier normalized in memory. Actual report metadata was preserved; all three pages opened and rendered in Desktop.",
+  "native_schema_2_13_files": [
+    "power_bi/Cyclistic.Report/definition/pages/overview/visuals/bike_filter/visual.json",
+    "power_bi/Cyclistic.Report/definition/pages/overview/visuals/kpi_1/visual.json",
+    "power_bi/Cyclistic.Report/definition/pages/overview/visuals/month_filter/visual.json",
+    "power_bi/Cyclistic.Report/definition/pages/patterns/visuals/rider_filter/visual.json",
+    "power_bi/Cyclistic.Report/definition/pages/stations/visuals/bike_filter/visual.json",
+    "power_bi/Cyclistic.Report/definition/pages/stations/visuals/month_filter/visual.json"
+  ],
+  "checks": [
+    {
+      "check": "12 original monthly browser downloads",
+      "status": "passed"
+    },
+    {
+      "check": "Source SHA-256 matches: 202510",
+      "status": "passed"
+    },
+    {
+      "check": "Source SHA-256 matches: 202511",
+      "status": "passed"
+    },
+    {
+      "check": "Source SHA-256 matches: 202512",
+      "status": "passed"
+    },
+    {
+      "check": "Source SHA-256 matches: 202601",
+      "status": "passed"
+    },
+    {
+      "check": "Source SHA-256 matches: 202602",
+      "status": "passed"
+    },
+    {
+      "check": "Source SHA-256 matches: 202603",
+      "status": "passed"
+    },
+    {
+      "check": "Source SHA-256 matches: 202604",
+      "status": "passed"
+    },
+    {
+      "check": "Source SHA-256 matches: 202605",
+      "status": "passed"
+    },
+    {
+      "check": "Source SHA-256 matches: 202606",
+      "status": "passed"
+    },
+    {
+      "check": "Source SHA-256 matches: 202607",
+      "status": "passed"
+    },
+    {
+      "check": "Source SHA-256 matches: 202608",
+      "status": "passed"
+    },
+    {
+      "check": "Source SHA-256 matches: 202609",
+      "status": "passed"
+    },
+    {
+      "check": "Unique retained IDs: 202510",
+      "status": "passed"
+    },
+    {
+      "check": "Valid retained durations and hours: 202510",
+      "status": "passed"
+    },
+    {
+      "check": "Weekend labels agree with weekdays: 202510",
+      "status": "passed"
+    },
+    {
+      "check": "Unique retained IDs: 202511",
+      "status": "passed"
+    },
+    {
+      "check": "Valid retained durations and hours: 202511",
+      "status": "passed"
+    },
+    {
+      "check": "Weekend labels agree with weekdays: 202511",
+      "status": "passed"
+    },
+    {
+      "check": "Unique retained IDs: 202512",
+      "status": "passed"
+    },
+    {
+      "check": "Valid retained durations and hours: 202512",
+      "status": "passed"
+    },
+    {
+      "check": "Weekend labels agree with weekdays: 202512",
+      "status": "passed"
+    },
+    {
+      "check": "Unique retained IDs: 202601",
+      "status": "passed"
+    },
+    {
+      "check": "Valid retained durations and hours: 202601",
+      "status": "passed"
+    },
+    {
+      "check": "Weekend labels agree with weekdays: 202601",
+      "status": "passed"
+    },
+    {
+      "check": "Unique retained IDs: 202602",
+      "status": "passed"
+    },
+    {
+      "check": "Valid retained durations and hours: 202602",
+      "status": "passed"
+    },
+    {
+      "check": "Weekend labels agree with weekdays: 202602",
+      "status": "passed"
+    },
+    {
+      "check": "Unique retained IDs: 202603",
+      "status": "passed"
+    },
+    {
+      "check": "Valid retained durations and hours: 202603",
+      "status": "passed"
+    },
+    {
+      "check": "Weekend labels agree with weekdays: 202603",
+      "status": "passed"
+    },
+    {
+      "check": "Unique retained IDs: 202604",
+      "status": "passed"
+    },
+    {
+      "check": "Valid retained durations and hours: 202604",
+      "status": "passed"
+    },
+    {
+      "check": "Weekend labels agree with weekdays: 202604",
+      "status": "passed"
+    },
+    {
+      "check": "Unique retained IDs: 202605",
+      "status": "passed"
+    },
+    {
+      "check": "Valid retained durations and hours: 202605",
+      "status": "passed"
+    },
+    {
+      "check": "Weekend labels agree with weekdays: 202605",
+      "status": "passed"
+    },
+    {
+      "check": "Unique retained IDs: 202606",
+      "status": "passed"
+    },
+    {
+      "check": "Valid retained durations and hours: 202606",
+      "status": "passed"
+    },
+    {
+      "check": "Weekend labels agree with weekdays: 202606",
+      "status": "passed"
+    },
+    {
+      "check": "Unique retained IDs: 202607",
+      "status": "passed"
+    },
+    {
+      "check": "Valid retained durations and hours: 202607",
+      "status": "passed"
+    },
+    {
+      "check": "Weekend labels agree with weekdays: 202607",
+      "status": "passed"
+    },
+    {
+      "check": "Unique retained IDs: 202608",
+      "status": "passed"
+    },
+    {
+      "check": "Valid retained durations and hours: 202608",
+      "status": "passed"
+    },
+    {
+      "check": "Weekend labels agree with weekdays: 202608",
+      "status": "passed"
+    },
+    {
+      "check": "Unique retained IDs: 202609",
+      "status": "passed"
+    },
+    {
+      "check": "Valid retained durations and hours: 202609",
+      "status": "passed"
+    },
+    {
+      "check": "Weekend labels agree with weekdays: 202609",
+      "status": "passed"
+    },
+    {
+      "check": "Complete 365-date period",
+      "status": "passed"
+    },
+    {
+      "check": "Trip-level and grouped counts match",
+      "status": "passed"
+    },
+    {
+      "check": "Unique trip table grain",
+      "status": "passed"
+    },
+    {
+      "check": "Unique station table grain",
+      "status": "passed"
+    },
+    {
+      "check": "Trip-level count, average, and weekend share: Casual",
+      "status": "passed"
+    },
+    {
+      "check": "Trip-level count, average, and weekend share: Member",
+      "status": "passed"
+    },
+    {
+      "check": "Unique dimension key for Trips_to_Month",
+      "status": "passed"
+    },
+    {
+      "check": "Unique dimension key for Trips_to_Rider",
+      "status": "passed"
+    },
+    {
+      "check": "Unique dimension key for Trips_to_Bike",
+      "status": "passed"
+    },
+    {
+      "check": "Unique dimension key for Stations_to_Month",
+      "status": "passed"
+    },
+    {
+      "check": "Unique dimension key for Stations_to_Rider",
+      "status": "passed"
+    },
+    {
+      "check": "Unique dimension key for Stations_to_Bike",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: actions_title",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: action_1",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: action_2",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: action_3",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference bike_filter: Bike.Bike",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: bike_filter",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference casual_rides: Trips.Casual Station Rides",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: casual_rides",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference coverage: Trips.Known Casual Station Share",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: coverage",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: footer",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: header",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference month_filter: Month.Month",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: month_filter",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: subtitle",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference top_stations: Stations.Start station",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference top_stations: Trips.Top 10 Casual Station Rides",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference top_stations: Trips.Top 10 Casual Station Rides",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: top_stations",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference average: Trips.Average Ride Minutes",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: average",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference bike_filter: Bike.Bike",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: bike_filter",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference casual: Trips.Casual Ride Share",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: casual",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference day_type: Trips.Day type",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference day_type: Trips.Total Rides",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference day_type: Rider.Rider",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference day_type: Trips.Day type",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: day_type",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: footer",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: header",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference hourly: Trips.Hour",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference hourly: Trips.Hourly Ride Share",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference hourly: Rider.Rider",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference hourly: Trips.Hour",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: hourly",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference month_filter: Month.Month",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: month_filter",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference rider_filter: Rider.Rider",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: rider_filter",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference rides: Trips.Total Rides",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: rides",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: subtitle",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference weekday_duration: Trips.Weekday",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference weekday_duration: Trips.Average Ride Minutes",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference weekday_duration: Rider.Rider",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference weekday_duration: Trips.Weekday",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: weekday_duration",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference weekend: Trips.Weekend Ride Share",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: weekend",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference weekend_group: Rider.Rider",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference weekend_group: Trips.Weekend Ride Share",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference weekend_group: Rider.Rider",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference weekend_group: Rider.Rider",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: weekend_group",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference bikes: Bike.Bike",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference bikes: Trips.Total Rides",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference bikes: Rider.Rider",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference bikes: Bike.Bike",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: bikes",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference bike_filter: Bike.Bike",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: bike_filter",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference duration: Rider.Rider",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference duration: Trips.Average Ride Minutes",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference duration: Rider.Rider",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference duration: Rider.Rider",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: duration",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: footer",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: header",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference kpi_0: Trips.Total Rides",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: kpi_0",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference kpi_1: Trips.Casual Ride Share",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference kpi_1: Trips.Casual Ride Share",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: kpi_1",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference kpi_2: Trips.Average Ride Minutes",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: kpi_2",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference kpi_3: Trips.Weekend Ride Share",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: kpi_3",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference monthly: Month.Month",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference monthly: Trips.Total Rides",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference monthly: Rider.Rider",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference monthly: Month.Month",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: monthly",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference month_filter: Month.Month",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: month_filter",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference rider_filter: Rider.Rider",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: rider_filter",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: subtitle",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference weekday: Trips.Weekday",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference weekday: Trips.Total Rides",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference weekday: Rider.Rider",
+      "status": "passed"
+    },
+    {
+      "check": "Visual reference weekday: Trips.Weekday",
+      "status": "passed"
+    },
+    {
+      "check": "Visual stays inside canvas: weekday",
+      "status": "passed"
+    },
+    {
+      "check": "Three report pages with correct active page",
+      "status": "passed"
+    }
+  ],
+  "native_interaction_validation": {
+    "status": "passed",
+    "tested": [
+      "Rider slicer on Riding Patterns",
+      "Month slicer on Overview",
+      "Combined month and bike slicers on Overview",
+      "Reset to full-period view"
+    ],
+    "all_pages_rendered": true
+  },
+  "native_dax_validation": {
+    "status": "passed",
+    "checks": 357,
+    "details": "power_bi_validation.json"
+  },
+  "native_pbix_validation": {
+    "status": "passed",
+    "saved_through_desktop": true,
+    "zip_integrity": "passed",
+    "report_matches_pbip": true,
+    "reopened_in_desktop": true,
+    "persisted_rides": 6007154,
+    "persisted_trip_groups": 34512,
+    "persisted_station_groups": 50977
+  },
+  "final_file_checks": "passed: Markdown links, Python syntax, documented measures, and SQL monthly growth",
+  "completed_at": "2026-10-14T00:06:19+03:00",
+  "folder_cleanup": {
+    "date": "2026-10-14",
+    "status": "passed",
+    "temporary_and_duplicate_files_recycled": 876,
+    "size_removed_from_project_gib": 1.24,
+    "protected_files_hash_verified": 114,
+    "source_zip_hashes_verified": 12,
+    "duplicate_raw_csvs_byte_verified_before_removal": 12,
+    "zip_reader_equivalence_check": "Full December source CSV matched direct ZIP reading.",
+    "sql_results_folder": "data/processed/sql_results",
+    "course_brief": "references/case_study_brief.pdf",
+    "analysis_rerun": "passed; SQL and pandas agree on 6,007,154 retained trips",
+    "python_syntax_and_local_links": "passed",
+    "power_bi_inputs_and_native_files": "preserved; PBIX integrity and PBIP report equality passed"
+  },
+  "github_readiness_review": {
+    "date": "2026-10-14",
+    "status": "passed",
+    "source_archives_hash_verified": 12,
+    "cleaned_trip_audit": "All 6,007,154 retained trips checked for unique IDs, valid duration, hour, weekend labels, and reconciliation to grouped tables.",
+    "analysis_rerun": "passed; pandas and all seven SQL exports agree",
+    "native_dax_checks": 222,
+    "exact_top10_month_bike_views": 24,
+    "top_station_ties": "Fixed with TOPN using station name as a deterministic tie-breaker.",
+    "pbix_fresh_reopen": "passed; persisted counts and all 24 filtered Top 10 views match processed CSVs",
+    "portable_data_parameter": "Neutral DataFolder saved in both PBIX and PBIP; imported data retained.",
+    "setup_script_copy_test": "passed for local configuration and --portable reset in a separate project copy",
+    "native_pages_reviewed": 3,
+    "native_campaign_slicer_test": "October 2025 and classic bike combined; reset to full-period Overview before saving",
+    "visual_field_and_canvas_checks": 40,
+    "pbix_report_matches_pbip": true,
+    "python_syntax": "passed",
+    "markdown_local_links_checked": 18,
+    "git_candidate_files": 102,
+    "git_candidate_bytes": 8315058,
+    "git_exclusions": "Raw ZIPs, cleaned trips, SQLite, caches, course packet, local CV notes, and temporary tools excluded.",
+    "personal_paths_and_common_key_patterns": "No matches in Git candidate text files.",
+    "unreferenced_draft_theme_recycled": true,
+    "publication": "Reviewed before initial GitHub publication.",
+    "temporary_review_tools_removed": true
+  },
+  "repository": {
+    "url": "https://github.com/MohammadKhairJaradat/cyclistic-bike-share-analysis",
+    "visibility": "public"
+  }
+}

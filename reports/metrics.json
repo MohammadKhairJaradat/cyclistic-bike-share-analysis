@@ -1,0 +1,31 @@
+{
+  "source_rides": 6171785,
+  "clean_rides": 6007154,
+  "removed_rides": 164631,
+  "period_start": "2025-10-01",
+  "period_end": "2026-09-30",
+  "riders": [
+    {
+      "rider_type": "Casual",
+      "ride_count": 2110304,
+      "average_minutes": 18.169276131156145,
+      "median_minutes": 11.142925000000002,
+      "maximum_minutes": 1439.97595,
+      "ride_share": 0.3512984684594402,
+      "weekend_share": 0.37189381245545666,
+      "missing_start_station_share": 0.2045733695240117
+    },
+    {
+      "rider_type": "Member",
+      "ride_count": 3896850,
+      "average_minutes": 12.17390555605596,
+      "median_minutes": 8.686933333333334,
+      "maximum_minutes": 1439.9016833333333,
+      "ride_share": 0.6487015315405598,
+      "weekend_share": 0.23258631971977367,
+      "missing_start_station_share": 0.19764245480323853
+    }
+  ],
+  "peak_month": "2026-08",
+  "top_casual_station": "Navy Pier"
+}

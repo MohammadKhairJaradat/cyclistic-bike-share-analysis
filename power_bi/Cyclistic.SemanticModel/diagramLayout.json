@@ -1,0 +1,100 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 50,
+            "y": 534.01684589210561
+          },
+          "nodeIndex": "Bike",
+          "nodeLineageTag": "7a2ff6f8-9657-57b2-8034-04ecd9427398",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 618.34065113106192,
+            "y": 335.58218258007611
+          },
+          "nodeIndex": "Month",
+          "nodeLineageTag": "6290fb4a-9e6e-5ebb-b146-370a03025915",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 852.340651131062,
+            "y": 240.11796596066586
+          },
+          "nodeIndex": "Quality",
+          "nodeLineageTag": "58130937-26f8-5702-98b5-c17d27da5201",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 247.34163195970257,
+            "y": -50
+          },
+          "nodeIndex": "Rider",
+          "nodeLineageTag": "fa797326-0698-5ad1-8d39-261f43b8a911",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 115.04999391719167,
+            "y": 104.12663330528574
+          },
+          "nodeIndex": "Stations",
+          "nodeLineageTag": "d47c246e-b2bb-5761-9e9c-b655519ed7a3",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 334.19454169285092,
+            "y": 354.23593192133171
+          },
+          "nodeIndex": "Trips",
+          "nodeLineageTag": "660ea139-4c23-5d84-92cf-c311d5c5833b",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

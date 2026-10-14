@@ -1,0 +1,17 @@
+data/raw/*
+!data/raw/.gitkeep
+data/cleaned/*
+!data/cleaned/.gitkeep
+data/processed/*.db
+power_bi/**/.pbi/
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+*.log
+.work/
+references/*.pdf
+reports/cv_project.md
+.env
+.env.*
+*.tmp
+*.bak
