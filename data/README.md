@@ -1,40 +1,55 @@
-# Data Files
+# Data Files & Storage Layers
 
-Source: [public Divvy trip data](https://divvybikes.com/system-data). Study period: October 2025-September 2026.
+Source: [public Divvy trip data](https://divvybikes.com/system-data) (`https://divvy-tripdata.s3.amazonaws.com/`). Study period: October 2025 – September 2026 (`6,171,785` raw rows → `6,007,154` cleaned rows).
 
-## Local originals
+## 1. Raw Archive Cache (`data/raw/` — Git-ignored)
 
-`raw/` contains the 12 unchanged browser-downloaded ZIPs. The preparation script reads CSV data directly from each ZIP, without creating duplicate extracted files. `source_manifest.csv` records each source URL, download date, size, hash, and source row count. Raw data is excluded from Git; download it from the official archive to rerun preparation.
+`raw/` stores the 12 monthly `.zip` archives (`202510-divvy-tripdata.zip` through `202609-divvy-tripdata.zip`, `225.7 MB` total).
+- [`source_manifest.csv`](source_manifest.csv) tracks each file's `source_url`, download date, `size_bytes`, `sha256` checksum, and `source_rows`.
+- `src/01_prepare_data.py` verifies each archive's SHA-256 digest before processing, skips already-verified local files on reruns, and downloads missing archives directly from the Divvy S3 bucket.
+- CSV streams are read directly from each `.zip` archive one month at a time without extracting uncompressed raw copies to disk.
 
-`cleaned/` contains one cleaned trip-level CSV per source month. These large files are also excluded from Git. A valid trip is assigned to its actual start date, rather than the source filename.
+## 2. Partitioned Parquet Store (`data/cleaned_parquet/` — Git-ignored)
 
-## Analysis tables
+During transformation, each cleaned monthly chunk is written to a Hive-style Partitioned Parquet layout using PyArrow (`snappy` compression):
 
-| File | Row meaning |
+```text
+data/cleaned_parquet/
+├── month=202510/trips.parquet
+├── month=202511/trips.parquet
+...
+└── month=202609/trips.parquet
+```
+
+- Covers all `6,007,154` cleaned trips across 12 partitions (`263.1 MB` total on disk).
+- Passing `--write-csv` to `run_pipeline.py` also exports uncompressed monthly CSVs to `data/cleaned/{YYYYMM}-cleaned.csv` (excluded from Git).
+
+## 3. Processed Analytical Tables & Validation (`data/processed/` — Tracked in Git)
+
+| File | Description |
 |---|---|
-| `trip_summary.csv` | Date, hour, rider group, and bike type |
-| `station_summary.csv` | Month, rider group, bike type, and recorded start-station name |
-| `rider_summary.csv` | One rider group, with trip-level mean and median duration |
-| `cleaning_log.csv` | Source and cleaning counts for one source month |
-| `duration_sensitivity.csv` | Rider group under one duration rule |
-| `monthly_summary.csv` | Month and rider group |
-| `weekday_summary.csv` | Weekday and rider group |
-| `hourly_summary.csv` | Start hour and rider group |
-| `bike_type_summary.csv` | Bike type and rider group |
-| `day_type_summary.csv` | Weekday/weekend and rider group |
-| `dim_month.csv`, `dim_rider.csv`, `dim_bike.csv` | Shared Power BI filter values |
+| `validation_report.json` | Automated ETL validation report (schema check, SHA-256 verification, per-month row reconciliation, duration/coordinate bounds, 12-month/365-day coverage, and SQLite vs. pandas agreement) |
+| `cleaning_log.csv` | Source row count, 8 sequential removal rule counts, and retained row count for each source month |
+| `trip_summary.csv` | Grouped fact table by `ride_date`, `year_month`, `weekday`, `weekday_order`, `day_type`, `hour`, `rider_type`, and `rideable_type` (`34,512` rows) |
+| `station_summary.csv` | Grouped fact table by `year_month`, `rider_type`, `rideable_type`, and `start_station_name` (`50,977` rows) |
+| `rider_summary.csv` | Trip-level count, mean, median, max duration, weekend share, and missing-station share by rider group |
+| `duration_sensitivity.csv` | Rider group comparison under three duration filter rules (`Positive duration`, `1 to 1440 minutes`, `1 to 60 minutes`) |
+| `monthly_summary.csv`, `weekday_summary.csv`, `hourly_summary.csv`, `bike_type_summary.csv`, `day_type_summary.csv` | Pre-aggregated dimensional summaries |
+| `top_casual_stations.csv` | Top 10 recorded start stations for casual riders |
+| `dim_month.csv`, `dim_rider.csv`, `dim_bike.csv` | Shared dimension tables for Power BI star-schema filtering |
+| `sql_results/sql_result_1.csv` .. `sql_result_7.csv` | Query outputs exported from executing `sql/analysis.sql` against `cyclistic.db` |
 
-The tables are supporting outputs of this educational analysis, not a stand-alone distribution of the original trip dataset. Their use remains subject to the source data terms.
+### Main Fields
 
-## Main fields
-
-- `ride_count`: number of trips represented by a grouped row. Sum it to count rides.
-- `duration_minutes`: sum of trip durations in the row. Divide its sum by the sum of `ride_count` for a weighted mean.
+- `ride_count`: number of trips represented by a grouped row. Sum it to count rides (`6,007,154` total).
+- `duration_minutes`: sum of trip durations in the row. Divide `SUM(duration_minutes)` by `SUM(ride_count)` for a weighted mean.
 - `rider_type`: `Casual` or `Member`, from the source's `member_casual` label.
-- `rideable_type`: the source bike category, such as `classic_bike` or `electric_bike`.
+- `rideable_type`: `classic_bike`, `electric_bike`, or `docked_bike`.
 - `ride_date`, `year_month`, `hour`: start time fields, used as supplied.
 - `weekday_order`: Monday = 1 through Sunday = 7 for sorting.
 - `day_type`: Saturday and Sunday are `Weekend`; other days are `Weekday`.
-- `start_station_name`: a recorded name, or `Unknown station` when missing.
+- `start_station_name`: recorded station name, or `Unknown station` when missing.
 
-`processed/cyclistic.db` is a local SQLite copy of the two grouped fact tables. It is excluded from Git and rebuilt by the analysis script. `processed/sql_results/` holds `sql_result_1.csv` through `sql_result_7.csv`, the outputs of `sql/analysis.sql`. The last two queries demonstrate a `LEFT JOIN` with CTEs and a `LAG` window function.
+## 4. Local SQLite Database (`data/processed/cyclistic.db` — Git-ignored)
+
+`cyclistic.db` is rebuilt automatically by `src/02_analyze_data.py` (or `python run_pipeline.py --analyze-only`). It loads `trip_summary`, `station_summary`, `cleaning_log`, and `rider_summary`, executes all seven queries in [`sql/analysis.sql`](../sql/analysis.sql), and verifies that SQL results match pandas aggregations.
