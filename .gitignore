@@ -2,9 +2,12 @@ data/raw/*
 !data/raw/.gitkeep
 data/cleaned/*
 !data/cleaned/.gitkeep
+data/cleaned_parquet/*
+!data/cleaned_parquet/.gitkeep
 data/processed/*.db
 power_bi/**/.pbi/
 __pycache__/
+.pytest_cache/
 .ipynb_checkpoints/
 .venv/
 *.log
